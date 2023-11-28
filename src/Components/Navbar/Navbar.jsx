@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import profile from "../../assets/user.png"
-
+import "./navbar.css"
 
 
 const Navbar = () => {

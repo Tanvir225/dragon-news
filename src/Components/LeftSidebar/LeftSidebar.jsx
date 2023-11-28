@@ -39,7 +39,7 @@ const LeftSidebar = () => {
         <div className="space-y-6 bg-base-100 shadow-sm p-5">
             <h2 className="text-xl font-semibold text-gray-700">All Category</h2>
 
-            <h2 className="bg-gray-300 text-lg text-black p-3 rounded-lg text-center">National News</h2>
+            <h2 className="bg-transparent outline-pink-500 outline-2 outline text-lg text-black p-3 rounded-lg text-center">National News</h2>
 
             {/* load catagories data from json */}
             <div className="space-y-5">
