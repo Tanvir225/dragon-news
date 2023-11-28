@@ -34,7 +34,7 @@ const Home = () => {
 
       {/* Home page Layout */}
 
-      <div className="mt-10 grid-cols-1 grid md:grid-cols-4">
+      <div className="mt-10  grid-cols-1 grid md:grid-cols-4">
         <div className="">
           {/* leftSidebar from components */}
           <LeftSidebar></LeftSidebar>
@@ -72,7 +72,7 @@ const Home = () => {
                     <h2 className="text-gray-600 font-bold">{data.title}</h2>
                     <img src={data.image_url} alt="" />
 
-                    <NewsDes description={data.details}></NewsDes>
+                    <NewsDes description={data.details} id={data._id}></NewsDes>
                     <hr />
                     <div className="flex items-center justify-between">
                       <div className="">

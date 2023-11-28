@@ -13,7 +13,7 @@ import bgImage from "../../assets/bg.png";
 
 const RightSidebar = () => {
   return (
-    <div className="bg-base-100 p-5 space-y-6 ">
+    <div className="bg-base-100 p-5 space-y-6  ">
       <div className="  space-y-5">
         <h2 className="text-lg text-gray-700 font-bold">Log In With</h2>
 
@@ -67,5 +67,7 @@ const RightSidebar = () => {
     </div>
   );
 };
+
+
 
 export default RightSidebar;

@@ -1,11 +1,13 @@
-import { useState } from "react";
+
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const NewsDes = ({description}) => {
+const NewsDes = ({ description, id }) => {
+    
 
-    //state for show more
-    const [isShowMore,setShowMore] = useState(false)
-
+    // //state for show more
+    // const [isShowMore,setShowMore] = useState(false)
+   
 
 
 
@@ -14,15 +16,18 @@ const NewsDes = ({description}) => {
     return (
         <div className="text-gray-500 text-sm">
             {
-                isShowMore ? description : `${description.substring(0,150)}... `
+                description ? description.length > 200 && <>
+                    `${description.substring(0, 150)}... `
+                    <Link to={`/details/${id}`}  className="cursor-pointer text-orange-500 font-semibold underline ml-1">show more</Link></> : ''
             }
-            <small className="cursor-pointer text-orange-500 font-semibold underline ml-1" onClick={()=> setShowMore(!isShowMore)}>{isShowMore ? ' show less..' : ' read more..'}</small>
+
         </div>
     );
 };
 
 NewsDes.propTypes = {
-    description:PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired
 }
 
 export default NewsDes;

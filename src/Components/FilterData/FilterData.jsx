@@ -3,7 +3,7 @@ const FilterData = ({filterData}) => {
     
     // destructure object
     const {thumbnail_url,title,author} = filterData || {}
-    console.log(filterData);
+    //console.log(filterData);
     return (
         <div>
             <div className="relative flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
