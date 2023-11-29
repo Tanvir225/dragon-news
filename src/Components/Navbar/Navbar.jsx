@@ -3,6 +3,7 @@ import profile from "../../assets/user.png"
 import "./navbar.css"
 import Context from "../../Context/Context";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 
 const Navbar = () => {
@@ -20,6 +21,12 @@ const Navbar = () => {
     //handle Logout
     const handleLogOut = () => {
         logOut()
+        .then(()=>{
+            toast.success('Successfully logout')
+        })
+        .catch(e=>{
+            console.log(e);
+        })
     }
 
 
